@@ -1,3 +1,9 @@
+## รายละเอียด
+ใน project ประกอบด้วยคำตอบ 4 ข้อ
+- ข้อที่ 1 อยู่ในโฟลเดอร์ testcase > Answer Quiz 1
+- ข้อที่ 2 อยู่ในโฟลเดอร์ testcase > Answer Quiz 2
+- ข้อที่ 3 อยู่ในโฟลเดอร์ testcase > Answer Quiz 3
+- ข้อที่ 6 อยู่ในโฟลเดอร์ testcase > Answer Quiz 6
 ## Python 3.12.3
 ## Library
 |Package|Package
