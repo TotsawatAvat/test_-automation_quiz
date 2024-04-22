@@ -1,0 +1,11 @@
+gui_01:
+  username: 'tomsmith'
+  password: 'SuperSecretPassword!'
+
+gui_02:
+  username: 'tomsmith'
+  password: '1234567890!'
+
+gui_03:
+  username: 'abcdef'
+  password: 'SuperSecretPassword!'

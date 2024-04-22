@@ -1,0 +1,16 @@
+api_01:
+  req:
+    ip: 'https://reqres.in'
+    path: '/api/users/12'
+  res:
+    status: 200
+    id: 12
+    email: 'rachel.howell@reqres.in'
+    first_name: 'Rachel'
+    last_name: 'Howell'
+    avatar: 'https://reqres.in/img/faces/12-image.jpg'
+
+api_02:
+  req:
+    ip: 'https://reqres.in'
+    path: '/api/users/1234'

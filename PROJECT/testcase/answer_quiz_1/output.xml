@@ -1,0 +1,1421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-04-22T11:17:39.082395" rpa="false" schemaversion="5">
+<suite id="s1" name="Case 101" source="C:\Users\luyto\OneDrive\เดสก์ท็อป\Quiz\PROJECT\testcase\answer_quiz_1\case_101.robot">
+<test id="s1-t1" name="Test case 101" line="6">
+<kw name="Create duplicates list" owner="basic_common">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-04-22T11:17:39.986670" level="INFO">@{list_new} = [ ]</msg>
+<var>@{list_new}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-04-22T11:17:39.986670" elapsed="0.000000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<for flavor="IN">
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:39.988664" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:39.988664" elapsed="0.000998"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:39.988664" elapsed="0.000998"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:39.988664" elapsed="0.000998"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:39.987667" elapsed="0.001995"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:39.987667" elapsed="0.001995"/>
+</if>
+<var name="${item2}">3</var>
+<status status="PASS" start="2024-04-22T11:17:39.987667" elapsed="0.001995"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:39.990169" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:39.991171" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:39.990169" elapsed="0.001002"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:39.990169" elapsed="0.001002"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:39.990169" elapsed="0.001002"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:39.990169" elapsed="0.001002"/>
+</if>
+<var name="${item2}">2</var>
+<status status="PASS" start="2024-04-22T11:17:39.990169" elapsed="0.001002"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="List Should Contain Value" owner="Collections">
+<msg time="2024-04-22T11:17:39.992169" level="INFO">False</msg>
+<msg time="2024-04-22T11:17:39.993166" level="FAIL">[ ] does not contain value '1'.</msg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Fails if the ``value`` is not found from ``list``.</doc>
+<status status="FAIL" start="2024-04-22T11:17:39.992169" elapsed="0.000997">[ ] does not contain value '1'.</status>
+</kw>
+<msg time="2024-04-22T11:17:39.993166" level="INFO">${status} = False</msg>
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-04-22T11:17:39.992169" elapsed="0.000997"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-04-22T11:17:39.994161" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-04-22T11:17:39.994161" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:39.994161" elapsed="0.000000"/>
+</if>
+<status status="PASS" start="2024-04-22T11:17:39.991171" elapsed="0.002990"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:39.991171" elapsed="0.003989"/>
+</if>
+<var name="${item2}">1</var>
+<status status="PASS" start="2024-04-22T11:17:39.991171" elapsed="0.003989"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:39.995160" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:39.996157" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:39.996157" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:39.996157" elapsed="0.000000"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:39.995160" elapsed="0.000997"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:39.995160" elapsed="0.000997"/>
+</if>
+<var name="${item2}">5</var>
+<status status="PASS" start="2024-04-22T11:17:39.995160" elapsed="0.000997"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:39.997154" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:39.997154" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:39.997154" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:39.997154" elapsed="0.000999"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:39.997154" elapsed="0.000999"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:39.996157" elapsed="0.001996"/>
+</if>
+<var name="${item2}">6</var>
+<status status="PASS" start="2024-04-22T11:17:39.996157" elapsed="0.001996"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:39.998153" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:39.998153" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:39.998153" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:39.998153" elapsed="0.001511"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:39.998153" elapsed="0.001570"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:39.998153" elapsed="0.001570"/>
+</if>
+<var name="${item2}">0</var>
+<status status="PASS" start="2024-04-22T11:17:39.998153" elapsed="0.001570"/>
+</iter>
+<var>${item2}</var>
+<value>@{list_2}</value>
+<status status="PASS" start="2024-04-22T11:17:39.987667" elapsed="0.012056"/>
+</for>
+<var name="${item1}">1</var>
+<status status="PASS" start="2024-04-22T11:17:39.987667" elapsed="0.012056"/>
+</iter>
+<iter>
+<for flavor="IN">
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.000721" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.000721" elapsed="0.001000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.000721" elapsed="0.001000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.000721" elapsed="0.001000"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.000721" elapsed="0.001000"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.000721" elapsed="0.001000"/>
+</if>
+<var name="${item2}">3</var>
+<status status="PASS" start="2024-04-22T11:17:40.000721" elapsed="0.001000"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="List Should Contain Value" owner="Collections">
+<msg time="2024-04-22T11:17:40.002723" level="INFO">False</msg>
+<msg time="2024-04-22T11:17:40.002723" level="FAIL">[ 1 ] does not contain value '2'.</msg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Fails if the ``value`` is not found from ``list``.</doc>
+<status status="FAIL" start="2024-04-22T11:17:40.002723" elapsed="0.000997">[ 1 ] does not contain value '2'.</status>
+</kw>
+<msg time="2024-04-22T11:17:40.003720" level="INFO">${status} = False</msg>
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-04-22T11:17:40.002723" elapsed="0.000997"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-04-22T11:17:40.003720" elapsed="0.000998"/>
+</kw>
+<status status="PASS" start="2024-04-22T11:17:40.003720" elapsed="0.000998"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.003720" elapsed="0.000998"/>
+</if>
+<status status="PASS" start="2024-04-22T11:17:40.001721" elapsed="0.002997"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.001721" elapsed="0.002997"/>
+</if>
+<var name="${item2}">2</var>
+<status status="PASS" start="2024-04-22T11:17:40.001721" elapsed="0.002997"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.005714" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.005714" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.005714" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.005714" elapsed="0.000000"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.004718" elapsed="0.000996"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.004718" elapsed="0.000996"/>
+</if>
+<var name="${item2}">1</var>
+<status status="PASS" start="2024-04-22T11:17:40.004718" elapsed="0.000996"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.006711" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.007709" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.006711" elapsed="0.000998"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.006711" elapsed="0.000998"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.006711" elapsed="0.000998"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.006711" elapsed="0.000998"/>
+</if>
+<var name="${item2}">5</var>
+<status status="PASS" start="2024-04-22T11:17:40.006711" elapsed="0.000998"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.008707" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.008707" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.008707" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.008707" elapsed="0.000000"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.007709" elapsed="0.000998"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.007709" elapsed="0.001996"/>
+</if>
+<var name="${item2}">6</var>
+<status status="PASS" start="2024-04-22T11:17:40.007709" elapsed="0.001996"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.009705" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.009705" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.009705" elapsed="0.001343"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.009705" elapsed="0.001343"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.009705" elapsed="0.001343"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.009705" elapsed="0.001343"/>
+</if>
+<var name="${item2}">0</var>
+<status status="PASS" start="2024-04-22T11:17:40.009705" elapsed="0.001343"/>
+</iter>
+<var>${item2}</var>
+<value>@{list_2}</value>
+<status status="PASS" start="2024-04-22T11:17:39.999723" elapsed="0.011325"/>
+</for>
+<var name="${item1}">2</var>
+<status status="PASS" start="2024-04-22T11:17:39.999723" elapsed="0.011325"/>
+</iter>
+<iter>
+<for flavor="IN">
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="List Should Contain Value" owner="Collections">
+<msg time="2024-04-22T11:17:40.013040" level="INFO">False</msg>
+<msg time="2024-04-22T11:17:40.014039" level="FAIL">[ 1 | 2 ] does not contain value '3'.</msg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Fails if the ``value`` is not found from ``list``.</doc>
+<status status="FAIL" start="2024-04-22T11:17:40.013040" elapsed="0.000999">[ 1 | 2 ] does not contain value '3'.</status>
+</kw>
+<msg time="2024-04-22T11:17:40.014039" level="INFO">${status} = False</msg>
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-04-22T11:17:40.013040" elapsed="0.000999"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-04-22T11:17:40.014039" elapsed="0.000996"/>
+</kw>
+<status status="PASS" start="2024-04-22T11:17:40.014039" elapsed="0.000996"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.014039" elapsed="0.000996"/>
+</if>
+<status status="PASS" start="2024-04-22T11:17:40.012045" elapsed="0.002990"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.012045" elapsed="0.003500"/>
+</if>
+<var name="${item2}">3</var>
+<status status="PASS" start="2024-04-22T11:17:40.012045" elapsed="0.003500"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.015545" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.016547" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.016547" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.016547" elapsed="0.000000"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.015545" elapsed="0.001002"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.015545" elapsed="0.001002"/>
+</if>
+<var name="${item2}">2</var>
+<status status="PASS" start="2024-04-22T11:17:40.015545" elapsed="0.001002"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.017547" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.017547" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.017547" elapsed="0.000996"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.017547" elapsed="0.000996"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.017547" elapsed="0.000996"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.017547" elapsed="0.000996"/>
+</if>
+<var name="${item2}">1</var>
+<status status="PASS" start="2024-04-22T11:17:40.016547" elapsed="0.001996"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.019538" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.020043" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.019538" elapsed="0.000505"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.019538" elapsed="0.000505"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.018543" elapsed="0.001500"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.018543" elapsed="0.001500"/>
+</if>
+<var name="${item2}">5</var>
+<status status="PASS" start="2024-04-22T11:17:40.018543" elapsed="0.001500"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.021044" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.021044" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.021044" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.021044" elapsed="0.000000"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.020043" elapsed="0.001001"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.020043" elapsed="0.001001"/>
+</if>
+<var name="${item2}">6</var>
+<status status="PASS" start="2024-04-22T11:17:40.020043" elapsed="0.002001"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.022044" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.023044" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.023044" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.023044" elapsed="0.000000"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.022044" elapsed="0.001000"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.022044" elapsed="0.001000"/>
+</if>
+<var name="${item2}">0</var>
+<status status="PASS" start="2024-04-22T11:17:40.022044" elapsed="0.001000"/>
+</iter>
+<var>${item2}</var>
+<value>@{list_2}</value>
+<status status="PASS" start="2024-04-22T11:17:40.012045" elapsed="0.010999"/>
+</for>
+<var name="${item1}">3</var>
+<status status="PASS" start="2024-04-22T11:17:40.012045" elapsed="0.011997"/>
+</iter>
+<iter>
+<for flavor="IN">
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.025037" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.025037" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.025037" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.025037" elapsed="0.000000"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.024042" elapsed="0.000995"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.024042" elapsed="0.001995"/>
+</if>
+<var name="${item2}">3</var>
+<status status="PASS" start="2024-04-22T11:17:40.024042" elapsed="0.001995"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.026037" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.027034" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.027034" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.027034" elapsed="0.000000"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.026037" elapsed="0.000997"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.026037" elapsed="0.000997"/>
+</if>
+<var name="${item2}">2</var>
+<status status="PASS" start="2024-04-22T11:17:40.026037" elapsed="0.000997"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.028031" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.028031" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.028031" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.028031" elapsed="0.000000"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.027034" elapsed="0.000997"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.027034" elapsed="0.000997"/>
+</if>
+<var name="${item2}">1</var>
+<status status="PASS" start="2024-04-22T11:17:40.027034" elapsed="0.000997"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="List Should Contain Value" owner="Collections">
+<msg time="2024-04-22T11:17:40.030554" level="INFO">False</msg>
+<msg time="2024-04-22T11:17:40.030554" level="FAIL">[ 1 | 2 | 3 ] does not contain value '5'.</msg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Fails if the ``value`` is not found from ``list``.</doc>
+<status status="FAIL" start="2024-04-22T11:17:40.029540" elapsed="0.001014">[ 1 | 2 | 3 ] does not contain value '5'.</status>
+</kw>
+<msg time="2024-04-22T11:17:40.030554" level="INFO">${status} = False</msg>
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-04-22T11:17:40.029540" elapsed="0.001014"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-04-22T11:17:40.031553" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-04-22T11:17:40.030554" elapsed="0.000999"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.030554" elapsed="0.000999"/>
+</if>
+<status status="PASS" start="2024-04-22T11:17:40.028031" elapsed="0.003522"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.028031" elapsed="0.003522"/>
+</if>
+<var name="${item2}">5</var>
+<status status="PASS" start="2024-04-22T11:17:40.028031" elapsed="0.003522"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.032556" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.033553" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.032556" elapsed="0.000997"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.032556" elapsed="0.000997"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.032556" elapsed="0.000997"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.032556" elapsed="0.000997"/>
+</if>
+<var name="${item2}">6</var>
+<status status="PASS" start="2024-04-22T11:17:40.032556" elapsed="0.000997"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.034551" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.034551" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.034551" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.034551" elapsed="0.000000"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.033553" elapsed="0.000998"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.033553" elapsed="0.000998"/>
+</if>
+<var name="${item2}">0</var>
+<status status="PASS" start="2024-04-22T11:17:40.033553" elapsed="0.000998"/>
+</iter>
+<var>${item2}</var>
+<value>@{list_2}</value>
+<status status="PASS" start="2024-04-22T11:17:40.024042" elapsed="0.011505"/>
+</for>
+<var name="${item1}">5</var>
+<status status="PASS" start="2024-04-22T11:17:40.024042" elapsed="0.011505"/>
+</iter>
+<iter>
+<for flavor="IN">
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.036544" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.036544" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.036544" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.036544" elapsed="0.000997"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.036544" elapsed="0.000997"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.036544" elapsed="0.000997"/>
+</if>
+<var name="${item2}">3</var>
+<status status="PASS" start="2024-04-22T11:17:40.035547" elapsed="0.001994"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.037541" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.038539" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.038539" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.038539" elapsed="0.000000"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.037541" elapsed="0.000998"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.037541" elapsed="0.000998"/>
+</if>
+<var name="${item2}">2</var>
+<status status="PASS" start="2024-04-22T11:17:40.037541" elapsed="0.000998"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.040044" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.040044" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.040044" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.040044" elapsed="0.000000"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.039537" elapsed="0.000507"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.039537" elapsed="0.000507"/>
+</if>
+<var name="${item2}">1</var>
+<status status="PASS" start="2024-04-22T11:17:40.039537" elapsed="0.000507"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.041046" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.041046" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.041046" elapsed="0.000996"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.041046" elapsed="0.000996"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.041046" elapsed="0.000996"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.041046" elapsed="0.000996"/>
+</if>
+<var name="${item2}">5</var>
+<status status="PASS" start="2024-04-22T11:17:40.041046" elapsed="0.000996"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="List Should Contain Value" owner="Collections">
+<msg time="2024-04-22T11:17:40.043041" level="INFO">False</msg>
+<msg time="2024-04-22T11:17:40.043041" level="FAIL">[ 1 | 2 | 3 | 5 ] does not contain value '6'.</msg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Fails if the ``value`` is not found from ``list``.</doc>
+<status status="FAIL" start="2024-04-22T11:17:40.043041" elapsed="0.000000">[ 1 | 2 | 3 | 5 ] does not contain value '6'.</status>
+</kw>
+<msg time="2024-04-22T11:17:40.044037" level="INFO">${status} = False</msg>
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-04-22T11:17:40.043041" elapsed="0.000996"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-04-22T11:17:40.044037" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-04-22T11:17:40.044037" elapsed="0.000999"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.044037" elapsed="0.000999"/>
+</if>
+<status status="PASS" start="2024-04-22T11:17:40.042042" elapsed="0.002994"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.042042" elapsed="0.002994"/>
+</if>
+<var name="${item2}">6</var>
+<status status="PASS" start="2024-04-22T11:17:40.042042" elapsed="0.002994"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.046032" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.046032" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.046032" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.046032" elapsed="0.000000"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.045036" elapsed="0.000996"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.045036" elapsed="0.000996"/>
+</if>
+<var name="${item2}">0</var>
+<status status="PASS" start="2024-04-22T11:17:40.045036" elapsed="0.000996"/>
+</iter>
+<var>${item2}</var>
+<value>@{list_2}</value>
+<status status="PASS" start="2024-04-22T11:17:40.035547" elapsed="0.010485"/>
+</for>
+<var name="${item1}">6</var>
+<status status="PASS" start="2024-04-22T11:17:40.035547" elapsed="0.011482"/>
+</iter>
+<iter>
+<for flavor="IN">
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.048026" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.048026" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.048026" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.048026" elapsed="0.000000"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.048026" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.048026" elapsed="0.000000"/>
+</if>
+<var name="${item2}">3</var>
+<status status="PASS" start="2024-04-22T11:17:40.047029" elapsed="0.000997"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.049535" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.050550" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.049535" elapsed="0.001015"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.049535" elapsed="0.001015"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.049535" elapsed="0.001015"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.049535" elapsed="0.001015"/>
+</if>
+<var name="${item2}">2</var>
+<status status="PASS" start="2024-04-22T11:17:40.049535" elapsed="0.001015"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.051550" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.051550" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.051550" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.051550" elapsed="0.000000"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.050550" elapsed="0.001000"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.050550" elapsed="0.001000"/>
+</if>
+<var name="${item2}">1</var>
+<status status="PASS" start="2024-04-22T11:17:40.050550" elapsed="0.001000"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.052552" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.053549" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.052552" elapsed="0.000997"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.052552" elapsed="0.000997"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.052552" elapsed="0.000997"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.052552" elapsed="0.000997"/>
+</if>
+<var name="${item2}">5</var>
+<status status="PASS" start="2024-04-22T11:17:40.052552" elapsed="0.000997"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.054547" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.054547" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.054547" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.054547" elapsed="0.000000"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.053549" elapsed="0.000998"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.053549" elapsed="0.001994"/>
+</if>
+<var name="${item2}">6</var>
+<status status="PASS" start="2024-04-22T11:17:40.053549" elapsed="0.001994"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.055543" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.056541" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.056541" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.056541" elapsed="0.000000"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.055543" elapsed="0.000998"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.055543" elapsed="0.000998"/>
+</if>
+<var name="${item2}">0</var>
+<status status="PASS" start="2024-04-22T11:17:40.055543" elapsed="0.000998"/>
+</iter>
+<var>${item2}</var>
+<value>@{list_2}</value>
+<status status="PASS" start="2024-04-22T11:17:40.047029" elapsed="0.009512"/>
+</for>
+<var name="${item1}">8</var>
+<status status="PASS" start="2024-04-22T11:17:40.047029" elapsed="0.009512"/>
+</iter>
+<iter>
+<for flavor="IN">
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.057538" elapsed="0.000998"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.058536" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.058536" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.058536" elapsed="0.000000"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.057538" elapsed="0.000998"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.057538" elapsed="0.000998"/>
+</if>
+<var name="${item2}">3</var>
+<status status="PASS" start="2024-04-22T11:17:40.057538" elapsed="0.000998"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.060042" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.060042" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.060042" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.060042" elapsed="0.000000"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.059534" elapsed="0.000508"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.059534" elapsed="0.000508"/>
+</if>
+<var name="${item2}">2</var>
+<status status="PASS" start="2024-04-22T11:17:40.059534" elapsed="0.000508"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.061046" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.062043" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.061046" elapsed="0.000997"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.061046" elapsed="0.000997"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.061046" elapsed="0.000997"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.061046" elapsed="0.000997"/>
+</if>
+<var name="${item2}">1</var>
+<status status="PASS" start="2024-04-22T11:17:40.061046" elapsed="0.000997"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.063040" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.063040" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.063040" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.063040" elapsed="0.000000"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.062043" elapsed="0.000997"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.062043" elapsed="0.000997"/>
+</if>
+<var name="${item2}">5</var>
+<status status="PASS" start="2024-04-22T11:17:40.062043" elapsed="0.000997"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.064037" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.065035" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.064037" elapsed="0.000998"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.064037" elapsed="0.000998"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.064037" elapsed="0.000998"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.064037" elapsed="0.000998"/>
+</if>
+<var name="${item2}">6</var>
+<status status="PASS" start="2024-04-22T11:17:40.064037" elapsed="0.000998"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item1}' == '${item2}'">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${status}</var>
+<arg>Collections.List Should Contain Value</arg>
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.066031" elapsed="0.000000"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' != 'True'">
+<kw name="Append To List" owner="Collections">
+<arg>${list_new}</arg>
+<arg>${item2}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2024-04-22T11:17:40.066031" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-22T11:17:40.066031" elapsed="0.000000"/>
+</branch>
+<status status="NOT RUN" start="2024-04-22T11:17:40.066031" elapsed="0.000000"/>
+</if>
+<status status="NOT RUN" start="2024-04-22T11:17:40.065035" elapsed="0.000996"/>
+</branch>
+<status status="PASS" start="2024-04-22T11:17:40.065035" elapsed="0.000996"/>
+</if>
+<var name="${item2}">0</var>
+<status status="PASS" start="2024-04-22T11:17:40.065035" elapsed="0.000996"/>
+</iter>
+<var>${item2}</var>
+<value>@{list_2}</value>
+<status status="PASS" start="2024-04-22T11:17:40.057538" elapsed="0.009491"/>
+</for>
+<var name="${item1}">9</var>
+<status status="PASS" start="2024-04-22T11:17:40.057538" elapsed="0.009491"/>
+</iter>
+<var>${item1}</var>
+<value>@{list_1}</value>
+<status status="PASS" start="2024-04-22T11:17:39.986670" elapsed="0.080359"/>
+</for>
+<return>
+<value>${list_new}</value>
+<status status="PASS" start="2024-04-22T11:17:40.067029" elapsed="0.000000"/>
+</return>
+<msg time="2024-04-22T11:17:40.067029" level="INFO">${list_new} = [1, 2, 3, 5, 6]</msg>
+<var>${list_new}</var>
+<arg>${case_101 ['list_1']}</arg>
+<arg>${case_101 ['list_2']}</arg>
+<doc>สร้าง list ที่มีข้อมูลตรงกัน</doc>
+<status status="PASS" start="2024-04-22T11:17:39.984678" elapsed="0.082351"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-22T11:17:40.069535" level="INFO">[1, 2, 3, 5, 6]</msg>
+<arg>${list_new}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-22T11:17:40.068027" elapsed="0.001508"/>
+</kw>
+<doc>ทดสอบ duplicates list</doc>
+<tag>101</tag>
+<status status="PASS" start="2024-04-22T11:17:39.982680" elapsed="0.087908"/>
+</test>
+<status status="PASS" start="2024-04-22T11:17:39.086384" elapsed="0.985650"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">101</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Case 101">Case 101</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

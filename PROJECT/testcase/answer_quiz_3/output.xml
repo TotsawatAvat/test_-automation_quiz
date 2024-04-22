@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-04-19T21:34:13.658045" rpa="false" schemaversion="5">
+<suite id="s1" name="Api 01 &amp; Api 02">
+<suite id="s1-s1" name="Api 01" source="C:\Users\luyto\OneDrive\เดสก์ท็อป\Quiz\PROJECT\testcase\answer_quiz_3\api_01.robot">
+<test id="s1-s1-t1" name="Get user profile success" line="6">
+<kw name="Send api get" owner="api_common">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-04-19T21:34:14.487228" level="INFO">Creating Session using : alias=mysession, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mysession</arg>
+<arg>${request ['ip']}</arg>
+<arg>disable_warnings=1</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-04-19T21:34:14.486249" elapsed="0.000979"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-04-19T21:34:14.648078" level="INFO">GET Request : url=https://reqres.in/api/users/12 
+ path_url=/api/users/12 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-04-19T21:34:14.648078" level="INFO">GET Response : url=https://reqres.in/api/users/12 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 19 Apr 2024 14:34:13 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1713534661&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=bHzCOSspPOj5Ejy7LomKfbVLqhvtMIFXFynVGMXSMa0%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1713534661&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=bHzCOSspPOj5Ejy7LomKfbVLqhvtMIFXFynVGMXSMa0%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"11c-Y8Nrcu5DO2DrJvfp3zc2PKGiar4"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '2592', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '876d9d3bfb662dd0-BKK', 'Content-Encoding': 'gzip'} 
+ body={"data":{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"},"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}} 
+ </msg>
+<msg time="2024-04-19T21:34:14.649055" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>${request ['path']}</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-04-19T21:34:14.487228" elapsed="0.161827"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-19T21:34:14.650062" level="INFO">${response_status} = 200</msg>
+<var>${response_status}</var>
+<arg>${response.status_code}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-19T21:34:14.649055" elapsed="0.001007"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-19T21:34:14.652230" level="INFO">${response_body} = {'data': {'id': 12, 'email': 'rachel.howell@reqres.in', 'first_name': 'Rachel', 'last_name': 'Howell', 'avatar': 'https://reqres.in/img/faces/12-image.jpg'}, 'support': {'url': 'https://reqres.in/#sup...</msg>
+<var>${response_body}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-19T21:34:14.650062" elapsed="0.002168"/>
+</kw>
+<return>
+<value>${response_status}</value>
+<value>${response_body}</value>
+<status status="PASS" start="2024-04-19T21:34:14.652230" elapsed="0.000000"/>
+</return>
+<msg time="2024-04-19T21:34:14.652230" level="INFO">${status} = 200</msg>
+<msg time="2024-04-19T21:34:14.652230" level="INFO">${body} = {'data': {'id': 12, 'email': 'rachel.howell@reqres.in', 'first_name': 'Rachel', 'last_name': 'Howell', 'avatar': 'https://reqres.in/img/faces/12-image.jpg'}, 'support': {'url': 'https://reqres.in/#sup...</msg>
+<var>${status}</var>
+<var>${body}</var>
+<arg>${api_01 ['req']}</arg>
+<doc>ยิง api method get</doc>
+<status status="PASS" start="2024-04-19T21:34:14.484263" elapsed="0.167967"/>
+</kw>
+<kw name="Verify response case success" owner="api_profile__function">
+<for flavor="IN">
+<iter>
+<if>
+<branch type="IF" condition="'${parameter}' == 'status'">
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_status}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-04-19T21:34:14.656140" elapsed="0.001950"/>
+</kw>
+<status status="PASS" start="2024-04-19T21:34:14.656140" elapsed="0.001950"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'id'">
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['id']}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.658090" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.658090" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'email'">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['email']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.658090" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.658090" elapsed="0.000976"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'first_name'">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['first_name']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.659066" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.659066" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'last_name'">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['last_name']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.659066" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.659066" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'avatar'">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['avatar']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.660074" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.659066" elapsed="0.001008"/>
+</branch>
+<status status="PASS" start="2024-04-19T21:34:14.656140" elapsed="0.003934"/>
+</if>
+<var name="${parameter}">status</var>
+<status status="PASS" start="2024-04-19T21:34:14.656140" elapsed="0.003934"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${parameter}' == 'status'">
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_status}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.661426" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.660074" elapsed="0.001352"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'id'">
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['id']}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-04-19T21:34:14.662406" elapsed="0.000977"/>
+</kw>
+<status status="PASS" start="2024-04-19T21:34:14.661426" elapsed="0.001957"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'email'">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['email']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.663383" elapsed="0.000976"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.663383" elapsed="0.000976"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'first_name'">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['first_name']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.664359" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.664359" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'last_name'">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['last_name']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.664359" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.664359" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'avatar'">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['avatar']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.665334" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.664359" elapsed="0.000975"/>
+</branch>
+<status status="PASS" start="2024-04-19T21:34:14.660074" elapsed="0.005260"/>
+</if>
+<var name="${parameter}">id</var>
+<status status="PASS" start="2024-04-19T21:34:14.660074" elapsed="0.005260"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${parameter}' == 'status'">
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_status}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.666310" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.666310" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'id'">
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['id']}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.666310" elapsed="0.000976"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.666310" elapsed="0.000976"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'email'">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['email']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-19T21:34:14.667286" elapsed="0.001952"/>
+</kw>
+<status status="PASS" start="2024-04-19T21:34:14.667286" elapsed="0.001952"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'first_name'">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['first_name']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.669238" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.669238" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'last_name'">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['last_name']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.669238" elapsed="0.001008"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.669238" elapsed="0.001008"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'avatar'">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['avatar']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.670246" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.670246" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-04-19T21:34:14.666310" elapsed="0.003936"/>
+</if>
+<var name="${parameter}">email</var>
+<status status="PASS" start="2024-04-19T21:34:14.665334" elapsed="0.004912"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${parameter}' == 'status'">
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_status}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.671239" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.671239" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'id'">
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['id']}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.671239" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.671239" elapsed="0.000975"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'email'">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['email']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.672214" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.672214" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'first_name'">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['first_name']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-19T21:34:14.672214" elapsed="0.001953"/>
+</kw>
+<status status="PASS" start="2024-04-19T21:34:14.672214" elapsed="0.001953"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'last_name'">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['last_name']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.675142" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.674167" elapsed="0.000975"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'avatar'">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['avatar']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.675142" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.675142" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-04-19T21:34:14.671239" elapsed="0.004879"/>
+</if>
+<var name="${parameter}">first_name</var>
+<status status="PASS" start="2024-04-19T21:34:14.670246" elapsed="0.005872"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${parameter}' == 'status'">
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_status}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.677093" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.676118" elapsed="0.000975"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'id'">
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['id']}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.677093" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.677093" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'email'">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['email']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.678069" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.677093" elapsed="0.000976"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'first_name'">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['first_name']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.678069" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.678069" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'last_name'">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['last_name']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-19T21:34:14.679047" elapsed="0.001008"/>
+</kw>
+<status status="PASS" start="2024-04-19T21:34:14.678069" elapsed="0.001986"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'avatar'">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['avatar']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.681055" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.680055" elapsed="0.001000"/>
+</branch>
+<status status="PASS" start="2024-04-19T21:34:14.676118" elapsed="0.004937"/>
+</if>
+<var name="${parameter}">last_name</var>
+<status status="PASS" start="2024-04-19T21:34:14.676118" elapsed="0.004937"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${parameter}' == 'status'">
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_status}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.682033" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.681055" elapsed="0.000978"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'id'">
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['id']}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.682033" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.682033" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'email'">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['email']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.683013" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.683013" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'first_name'">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['first_name']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.683989" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.683013" elapsed="0.000976"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'last_name'">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['last_name']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2024-04-19T21:34:14.683989" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-04-19T21:34:14.683989" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="'${parameter}' == 'avatar'">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${req_data ['${parameter}']}</arg>
+<arg>${res_body ['data'] ['avatar']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-19T21:34:14.684966" elapsed="0.000976"/>
+</kw>
+<status status="PASS" start="2024-04-19T21:34:14.683989" elapsed="0.001953"/>
+</branch>
+<status status="PASS" start="2024-04-19T21:34:14.681055" elapsed="0.004887"/>
+</if>
+<var name="${parameter}">avatar</var>
+<status status="PASS" start="2024-04-19T21:34:14.681055" elapsed="0.004887"/>
+</iter>
+<var>${parameter}</var>
+<value>@{req_data.keys()}</value>
+<status status="PASS" start="2024-04-19T21:34:14.655163" elapsed="0.030779"/>
+</for>
+<arg>${api_01 ['res']}</arg>
+<arg>${status}</arg>
+<arg>${body}</arg>
+<doc>ตรวจสอบ response กรณี สำเร็จ</doc>
+<status status="PASS" start="2024-04-19T21:34:14.654187" elapsed="0.032730"/>
+</kw>
+<doc>ทดสอบ api profile กรณี สำเร็จ</doc>
+<tag>api</tag>
+<tag>api_01</tag>
+<status status="PASS" start="2024-04-19T21:34:14.482309" elapsed="0.204608"/>
+</test>
+<status status="PASS" start="2024-04-19T21:34:13.728453" elapsed="0.960417"/>
+</suite>
+<suite id="s1-s2" name="Api 02" source="C:\Users\luyto\OneDrive\เดสก์ท็อป\Quiz\PROJECT\testcase\answer_quiz_3\api_02.robot">
+<test id="s1-s2-t1" name="Get user profile but user not found" line="6">
+<kw name="Send api get" owner="api_common">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-04-19T21:34:14.715995" level="INFO">Creating Session using : alias=mysession, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>mysession</arg>
+<arg>${request ['ip']}</arg>
+<arg>disable_warnings=1</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-04-19T21:34:14.715995" elapsed="0.000977"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2024-04-19T21:34:15.344999" level="INFO">GET Request : url=https://reqres.in/api/users/1234 
+ path_url=/api/users/1234 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-04-19T21:34:15.344999" level="INFO">GET Response : url=https://reqres.in/api/users/1234 
+ status=404, reason=Not Found 
+ headers={'Date': 'Fri, 19 Apr 2024 14:34:14 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '2', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1713537254&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=m9qZf6an4w4742OVTJQiqfkEhLo9avrGgzHuZVSsSTg%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1713537254&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=m9qZf6an4w4742OVTJQiqfkEhLo9avrGgzHuZVSsSTg%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'EXPIRED', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '876d9d3d3ca87dc8-BKK'} 
+ body={} 
+ </msg>
+<msg time="2024-04-19T21:34:15.345975" level="INFO">${response} = &lt;Response [404]&gt;</msg>
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>${request ['path']}</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-04-19T21:34:14.716972" elapsed="0.629003"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-19T21:34:15.346951" level="INFO">${response_status} = 404</msg>
+<var>${response_status}</var>
+<arg>${response.status_code}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-19T21:34:15.345975" elapsed="0.000976"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-19T21:34:15.347926" level="INFO">${response_body} = {}</msg>
+<var>${response_body}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-19T21:34:15.346951" elapsed="0.000975"/>
+</kw>
+<return>
+<value>${response_status}</value>
+<value>${response_body}</value>
+<status status="PASS" start="2024-04-19T21:34:15.347926" elapsed="0.000000"/>
+</return>
+<msg time="2024-04-19T21:34:15.348903" level="INFO">${status} = 404</msg>
+<msg time="2024-04-19T21:34:15.348903" level="INFO">${body} = {}</msg>
+<var>${status}</var>
+<var>${body}</var>
+<arg>${api_02 ['req']}</arg>
+<doc>ยิง api method get</doc>
+<status status="PASS" start="2024-04-19T21:34:14.714042" elapsed="0.634861"/>
+</kw>
+<kw name="Verify response case not found" owner="api_profile__function">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-04-19T21:34:15.349910" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${res_status}</arg>
+<arg>404</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-04-19T21:34:15.349910" elapsed="0.000996"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-04-19T21:34:15.350906" level="INFO">${empty_dict} = {}</msg>
+<var>${empty_dict}</var>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-04-19T21:34:15.350906" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<msg time="2024-04-19T21:34:15.351885" level="INFO">Argument types are:
+&lt;class 'dict'&gt;
+&lt;class 'robot.utils.dotdict.DotDict'&gt;</msg>
+<arg>${res_body}</arg>
+<arg>${empty_dict}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-19T21:34:15.350906" elapsed="0.000979"/>
+</kw>
+<arg>${status}</arg>
+<arg>${body}</arg>
+<doc>ตรวจสอบ response กรณี ไม่พบข้อมูล</doc>
+<status status="PASS" start="2024-04-19T21:34:15.349910" elapsed="0.001975"/>
+</kw>
+<doc>ทดสอบ api profile กรณี ไม่พบข้อมูล</doc>
+<tag>api</tag>
+<tag>api_02</tag>
+<status status="PASS" start="2024-04-19T21:34:14.713068" elapsed="0.639798"/>
+</test>
+<status status="PASS" start="2024-04-19T21:34:14.689878" elapsed="0.664939"/>
+</suite>
+<status status="PASS" start="2024-04-19T21:34:13.661039" elapsed="1.694756"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">api</stat>
+<stat pass="1" fail="0" skip="0">api_01</stat>
+<stat pass="1" fail="0" skip="0">api_02</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Api 01 &amp; Api 02">Api 01 &amp; Api 02</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Api 01">Api 01 &amp; Api 02.Api 01</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Api 02">Api 01 &amp; Api 02.Api 02</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
