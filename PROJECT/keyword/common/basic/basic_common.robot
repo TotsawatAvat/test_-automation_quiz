@@ -1,7 +1,7 @@
 *** Keywords ***
 Create duplicates list
     [Arguments]      ${list_1}  ${list_2}
-    [Documentation]  สร้าง list ที่มีข้อมูลตรงกัน
+    [Documentation]  สร้างรายการที่มีข้อมูลตรงกันจาก 2 รายการ
         @{list_new}=  BuiltIn.Create List
         FOR  ${item1}  IN  @{list_1}
                 FOR  ${item2}  IN  @{list_2}

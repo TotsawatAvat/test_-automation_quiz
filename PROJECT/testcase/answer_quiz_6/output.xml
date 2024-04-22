@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-04-20T01:14:11.817032" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-04-22T12:17:09.409317" rpa="false" schemaversion="5">
 <suite id="s1" name="Case 601" source="C:\Users\luyto\OneDrive\เดสก์ท็อป\Quiz\PROJECT\testcase\answer_quiz_6\case_601.robot">
 <test id="s1-t1" name="Test case 601" line="6">
 <kw name="Convert Simple Cipher" owner="simple_cipher">
-<msg time="2024-04-20T01:14:12.680151" level="INFO">${result} = TRYME</msg>
+<msg time="2024-04-22T12:17:10.266992" level="INFO">${result} = TRYME</msg>
 <var>${result}</var>
 <arg>${case_601 ['encrypted']}</arg>
 <arg>${case_601 ['k']}</arg>
-<status status="PASS" start="2024-04-20T01:14:12.679159" elapsed="0.000992"/>
+<status status="PASS" start="2024-04-22T12:17:10.265992" elapsed="0.001000"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-04-20T01:14:12.682103" level="INFO">TRYME</msg>
+<msg time="2024-04-22T12:17:10.269522" level="INFO">TRYME</msg>
 <arg>${result}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-04-20T01:14:12.682103" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-22T12:17:10.269522" elapsed="0.000000"/>
 </kw>
 <doc>ทดสอบ simple cipher</doc>
 <tag>601</tag>
-<status status="PASS" start="2024-04-20T01:14:12.677179" elapsed="0.005901"/>
+<status status="PASS" start="2024-04-22T12:17:10.264966" elapsed="0.004556"/>
 </test>
-<status status="PASS" start="2024-04-20T01:14:11.820069" elapsed="0.864961"/>
+<status status="PASS" start="2024-04-22T12:17:09.413041" elapsed="0.858958"/>
 </suite>
 <statistics>
 <total>

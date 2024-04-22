@@ -1,251 +1,251 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-04-19T21:48:12.314044" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-04-22T12:13:17.763439" rpa="false" schemaversion="5">
 <suite id="s1" name="Gui 01 &amp; Gui 02 &amp; Gui 03">
 <suite id="s1-s1" name="Gui 01" source="C:\Users\luyto\OneDrive\เดสก์ท็อป\Quiz\PROJECT\testcase\answer_quiz_2\gui_01.robot">
 <test id="s1-s1-t1" name="Login success" line="8">
 <kw name="Open website" owner="gui_common" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-19T21:48:13.161888" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/login'.</msg>
+<msg time="2024-04-22T12:13:18.631570" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/login'.</msg>
 <arg>${url}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-19T21:48:13.161888" elapsed="8.475496"/>
+<status status="PASS" start="2024-04-22T12:13:18.630574" elapsed="7.152658"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-04-19T21:48:21.637384" elapsed="0.118367"/>
+<status status="PASS" start="2024-04-22T12:13:25.783232" elapsed="0.118281"/>
 </kw>
-<status status="PASS" start="2024-04-19T21:48:13.160876" elapsed="8.594875"/>
+<status status="PASS" start="2024-04-22T12:13:18.629571" elapsed="7.272941"/>
 </kw>
 <kw name="Login to website" owner="gui_login__feature">
 <kw name="Input username" owner="gui_login__function">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-19T21:48:21.759711" level="INFO">Typing text 'tomsmith' into text field '//label[text()='Username']/following-sibling::input[@id='username']'.</msg>
+<msg time="2024-04-22T12:13:25.907038" level="INFO">Typing text 'tomsmith' into text field '//label[text()='Username']/following-sibling::input[@id='username']'.</msg>
 <arg>${login__input.username}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-19T21:48:21.758710" elapsed="0.192227"/>
+<status status="PASS" start="2024-04-22T12:13:25.906043" elapsed="0.206980"/>
 </kw>
 <arg>${username}</arg>
 <doc>กรอกข้อมูล 'ผู้ใช้งาน'</doc>
-<status status="PASS" start="2024-04-19T21:48:21.758710" elapsed="0.193205"/>
+<status status="PASS" start="2024-04-22T12:13:25.905019" elapsed="0.208004"/>
 </kw>
 <kw name="Input password" owner="gui_login__function">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-19T21:48:21.953865" level="INFO">Typing text 'SuperSecretPassword!' into text field '//label[text()='Password']/following-sibling::input[@id='password']'.</msg>
+<msg time="2024-04-22T12:13:26.115017" level="INFO">Typing text 'SuperSecretPassword!' into text field '//label[text()='Password']/following-sibling::input[@id='password']'.</msg>
 <arg>${login__input.password}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-19T21:48:21.952887" elapsed="0.171723"/>
+<status status="PASS" start="2024-04-22T12:13:26.114020" elapsed="0.192023"/>
 </kw>
 <arg>${password}</arg>
 <doc>กรอกข้อมูล 'รหัสผ่าน'</doc>
-<status status="PASS" start="2024-04-19T21:48:21.951915" elapsed="0.172695"/>
+<status status="PASS" start="2024-04-22T12:13:26.113023" elapsed="0.193020"/>
 </kw>
 <kw name="Click login" owner="gui_login__function">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-19T21:48:22.127538" level="INFO">Clicking element '//button[@type='submit']/i[text()=' Login']'.</msg>
+<msg time="2024-04-22T12:13:26.308037" level="INFO">Clicking element '//button[@type='submit']/i[text()=' Login']'.</msg>
 <arg>${login__button.login}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-19T21:48:22.125586" elapsed="0.755562"/>
+<status status="PASS" start="2024-04-22T12:13:26.307037" elapsed="0.747948"/>
 </kw>
 <doc>คลิกปุ่ม 'ล็อกอิน'</doc>
-<status status="PASS" start="2024-04-19T21:48:22.125586" elapsed="0.755562"/>
+<status status="PASS" start="2024-04-22T12:13:26.306043" elapsed="0.748942"/>
 </kw>
 <arg>${gui_01 ['username']}</arg>
 <arg>${gui_01 ['password']}</arg>
-<status status="PASS" start="2024-04-19T21:48:21.756728" elapsed="1.124420"/>
+<status status="PASS" start="2024-04-22T12:13:25.903510" elapsed="1.152500"/>
 </kw>
 <kw name="Check popup login success" owner="gui_main__function">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${home__text.popup_login_succsss}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-19T21:48:22.883102" elapsed="0.114666"/>
+<status status="PASS" start="2024-04-22T12:13:27.057495" elapsed="0.103580"/>
 </kw>
 <doc>เช็คป๊อบอัพ 'ล็อกอินสำเร็จ'</doc>
-<status status="PASS" start="2024-04-19T21:48:22.882123" elapsed="0.115645"/>
+<status status="PASS" start="2024-04-22T12:13:27.056010" elapsed="0.105065"/>
 </kw>
 <kw name="Click logout" owner="gui_main__function">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-19T21:48:23.000754" level="INFO">Clicking element '//div[@id='content']//i[text()=' Logout']'.</msg>
+<msg time="2024-04-22T12:13:27.163072" level="INFO">Clicking element '//div[@id='content']//i[text()=' Logout']'.</msg>
 <arg>${home__button.logout}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-19T21:48:22.999779" elapsed="0.723844"/>
+<status status="PASS" start="2024-04-22T12:13:27.162075" elapsed="0.718937"/>
 </kw>
 <doc>คลิกปุ่ม 'ล็อกเอ้าท์'</doc>
-<status status="PASS" start="2024-04-19T21:48:22.998776" elapsed="0.724847"/>
+<status status="PASS" start="2024-04-22T12:13:27.162075" elapsed="0.718937"/>
 </kw>
 <kw name="Check popup logout success" owner="gui_login__function">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${login__text.popup_logout_succsss}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-19T21:48:23.724599" elapsed="0.038079"/>
+<status status="PASS" start="2024-04-22T12:13:27.883004" elapsed="0.029266"/>
 </kw>
 <doc>เช็คป๊อบอัพ 'ล็อกเอ้าท์สำเร็จ'</doc>
-<status status="PASS" start="2024-04-19T21:48:23.724599" elapsed="0.038079"/>
+<status status="PASS" start="2024-04-22T12:13:27.882007" elapsed="0.030263"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-19T21:48:23.763645" elapsed="2.168234"/>
+<status status="PASS" start="2024-04-22T12:13:27.913270" elapsed="2.191677"/>
 </kw>
 <doc>ทดสอบเข้าสู่ระบบ กรณี สำเร็จ</doc>
 <tag>gui</tag>
 <tag>gui_01</tag>
-<status status="PASS" start="2024-04-19T21:48:13.158536" elapsed="12.773343"/>
+<status status="PASS" start="2024-04-22T12:13:18.627028" elapsed="11.478921"/>
 </test>
-<status status="PASS" start="2024-04-19T21:48:12.385678" elapsed="13.548153"/>
+<status status="PASS" start="2024-04-22T12:13:17.835426" elapsed="12.272438"/>
 </suite>
 <suite id="s1-s2" name="Gui 02" source="C:\Users\luyto\OneDrive\เดสก์ท็อป\Quiz\PROJECT\testcase\answer_quiz_2\gui_02.robot">
 <test id="s1-s2-t1" name="Login password incorrect" line="8">
 <kw name="Open website" owner="gui_common" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-19T21:48:25.960329" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/login'.</msg>
+<msg time="2024-04-22T12:13:30.142167" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/login'.</msg>
 <arg>${url}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-19T21:48:25.958950" elapsed="5.769987"/>
+<status status="PASS" start="2024-04-22T12:13:30.141170" elapsed="5.769881"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-04-19T21:48:31.730221" elapsed="0.116625"/>
+<status status="PASS" start="2024-04-22T12:13:35.911051" elapsed="0.122479"/>
 </kw>
-<status status="PASS" start="2024-04-19T21:48:25.958950" elapsed="5.887896"/>
+<status status="PASS" start="2024-04-22T12:13:30.141170" elapsed="5.892360"/>
 </kw>
 <kw name="Login to website" owner="gui_login__feature">
 <kw name="Input username" owner="gui_login__function">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-19T21:48:31.850859" level="INFO">Typing text 'tomsmith' into text field '//label[text()='Username']/following-sibling::input[@id='username']'.</msg>
+<msg time="2024-04-22T12:13:36.038058" level="INFO">Typing text 'tomsmith' into text field '//label[text()='Username']/following-sibling::input[@id='username']'.</msg>
 <arg>${login__input.username}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-19T21:48:31.849884" elapsed="0.202983"/>
+<status status="PASS" start="2024-04-22T12:13:36.037057" elapsed="0.193880"/>
 </kw>
 <arg>${username}</arg>
 <doc>กรอกข้อมูล 'ผู้ใช้งาน'</doc>
-<status status="PASS" start="2024-04-19T21:48:31.848907" elapsed="0.203960"/>
+<status status="PASS" start="2024-04-22T12:13:36.037057" elapsed="0.194876"/>
 </kw>
 <kw name="Input password" owner="gui_login__function">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-19T21:48:32.055795" level="INFO">Typing text '1234567890!' into text field '//label[text()='Password']/following-sibling::input[@id='password']'.</msg>
+<msg time="2024-04-22T12:13:36.233928" level="INFO">Typing text '1234567890!' into text field '//label[text()='Password']/following-sibling::input[@id='password']'.</msg>
 <arg>${login__input.password}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-19T21:48:32.053845" elapsed="0.139906"/>
+<status status="PASS" start="2024-04-22T12:13:36.232929" elapsed="0.145346"/>
 </kw>
 <arg>${password}</arg>
 <doc>กรอกข้อมูล 'รหัสผ่าน'</doc>
-<status status="PASS" start="2024-04-19T21:48:32.052867" elapsed="0.140884"/>
+<status status="PASS" start="2024-04-22T12:13:36.231933" elapsed="0.146342"/>
 </kw>
 <kw name="Click login" owner="gui_login__function">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-19T21:48:32.195704" level="INFO">Clicking element '//button[@type='submit']/i[text()=' Login']'.</msg>
+<msg time="2024-04-22T12:13:36.380269" level="INFO">Clicking element '//button[@type='submit']/i[text()=' Login']'.</msg>
 <arg>${login__button.login}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-19T21:48:32.194728" elapsed="0.745840"/>
+<status status="PASS" start="2024-04-22T12:13:36.379273" elapsed="0.731100"/>
 </kw>
 <doc>คลิกปุ่ม 'ล็อกอิน'</doc>
-<status status="PASS" start="2024-04-19T21:48:32.193751" elapsed="0.746817"/>
+<status status="PASS" start="2024-04-22T12:13:36.379273" elapsed="0.731100"/>
 </kw>
 <arg>${gui_02 ['username']}</arg>
 <arg>${gui_02 ['password']}</arg>
-<status status="PASS" start="2024-04-19T21:48:31.847821" elapsed="1.092747"/>
+<status status="PASS" start="2024-04-22T12:13:36.035038" elapsed="1.076329"/>
 </kw>
 <kw name="Check popup pass incorrect" owner="gui_login__function">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${login__text.popup_pass_error}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-19T21:48:32.942520" elapsed="0.037086"/>
+<status status="PASS" start="2024-04-22T12:13:37.112369" elapsed="0.034040"/>
 </kw>
 <doc>เช็คป๊อบอัพ 'รหัสผ่านผิด'</doc>
-<status status="PASS" start="2024-04-19T21:48:32.941544" elapsed="0.038062"/>
+<status status="PASS" start="2024-04-22T12:13:37.111367" elapsed="0.035042"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-19T21:48:32.980544" elapsed="2.160484"/>
+<status status="PASS" start="2024-04-22T12:13:37.147405" elapsed="2.171038"/>
 </kw>
 <doc>ทดสอบเข้าสู่ระบบ กรณี รหัสผ่านผิด</doc>
 <tag>gui</tag>
 <tag>gui_02</tag>
-<status status="PASS" start="2024-04-19T21:48:25.957439" elapsed="9.184562"/>
+<status status="PASS" start="2024-04-22T12:13:30.139175" elapsed="9.180279"/>
 </test>
-<status status="PASS" start="2024-04-19T21:48:25.935783" elapsed="9.208171"/>
+<status status="PASS" start="2024-04-22T12:13:30.109714" elapsed="9.211179"/>
 </suite>
 <suite id="s1-s3" name="Gui 03" source="C:\Users\luyto\OneDrive\เดสก์ท็อป\Quiz\PROJECT\testcase\answer_quiz_2\gui_03.robot">
 <test id="s1-s3-t1" name="Login username notfound" line="8">
 <kw name="Open website" owner="gui_common" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-19T21:48:35.169795" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/login'.</msg>
+<msg time="2024-04-22T12:13:39.354108" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/login'.</msg>
 <arg>${url}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-19T21:48:35.169795" elapsed="5.798770"/>
+<status status="PASS" start="2024-04-22T12:13:39.354108" elapsed="6.076277"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-04-19T21:48:40.968565" elapsed="0.119042"/>
+<status status="PASS" start="2024-04-22T12:13:45.431383" elapsed="0.132581"/>
 </kw>
-<status status="PASS" start="2024-04-19T21:48:35.168787" elapsed="5.918820"/>
+<status status="PASS" start="2024-04-22T12:13:39.353113" elapsed="6.210851"/>
 </kw>
 <kw name="Login to website" owner="gui_login__feature">
 <kw name="Input username" owner="gui_login__function">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-19T21:48:41.090602" level="INFO">Typing text 'abcdef' into text field '//label[text()='Username']/following-sibling::input[@id='username']'.</msg>
+<msg time="2024-04-22T12:13:45.567536" level="INFO">Typing text 'abcdef' into text field '//label[text()='Username']/following-sibling::input[@id='username']'.</msg>
 <arg>${login__input.username}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-19T21:48:41.090602" elapsed="0.183210"/>
+<status status="PASS" start="2024-04-22T12:13:45.566519" elapsed="0.168211"/>
 </kw>
 <arg>${username}</arg>
 <doc>กรอกข้อมูล 'ผู้ใช้งาน'</doc>
-<status status="PASS" start="2024-04-19T21:48:41.089623" elapsed="0.184189"/>
+<status status="PASS" start="2024-04-22T12:13:45.566519" elapsed="0.168211"/>
 </kw>
 <kw name="Input password" owner="gui_login__function">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-19T21:48:41.275765" level="INFO">Typing text 'SuperSecretPassword!' into text field '//label[text()='Password']/following-sibling::input[@id='password']'.</msg>
+<msg time="2024-04-22T12:13:45.736856" level="INFO">Typing text 'SuperSecretPassword!' into text field '//label[text()='Password']/following-sibling::input[@id='password']'.</msg>
 <arg>${login__input.password}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-19T21:48:41.274789" elapsed="0.169102"/>
+<status status="PASS" start="2024-04-22T12:13:45.735756" elapsed="0.168959"/>
 </kw>
 <arg>${password}</arg>
 <doc>กรอกข้อมูล 'รหัสผ่าน'</doc>
-<status status="PASS" start="2024-04-19T21:48:41.273812" elapsed="0.170079"/>
+<status status="PASS" start="2024-04-22T12:13:45.735756" elapsed="0.168959"/>
 </kw>
 <kw name="Click login" owner="gui_login__function">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-19T21:48:41.445842" level="INFO">Clicking element '//button[@type='submit']/i[text()=' Login']'.</msg>
+<msg time="2024-04-22T12:13:45.906728" level="INFO">Clicking element '//button[@type='submit']/i[text()=' Login']'.</msg>
 <arg>${login__button.login}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-19T21:48:41.444873" elapsed="0.732006"/>
+<status status="PASS" start="2024-04-22T12:13:45.905729" elapsed="0.741077"/>
 </kw>
 <doc>คลิกปุ่ม 'ล็อกอิน'</doc>
-<status status="PASS" start="2024-04-19T21:48:41.444873" elapsed="0.732006"/>
+<status status="PASS" start="2024-04-22T12:13:45.905729" elapsed="0.741077"/>
 </kw>
 <arg>${gui_03 ['username']}</arg>
 <arg>${gui_03 ['password']}</arg>
-<status status="PASS" start="2024-04-19T21:48:41.087607" elapsed="1.089272"/>
+<status status="PASS" start="2024-04-22T12:13:45.564996" elapsed="1.081810"/>
 </kw>
 <kw name="Check popup user notfound" owner="gui_login__function">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${login__text.popup_user_error}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-19T21:48:42.177854" elapsed="0.033795"/>
+<status status="PASS" start="2024-04-22T12:13:46.647810" elapsed="0.037558"/>
 </kw>
 <doc>เช็คป๊อบอัพ 'ผู้ใช้งานผิด'</doc>
-<status status="PASS" start="2024-04-19T21:48:42.177854" elapsed="0.033795"/>
+<status status="PASS" start="2024-04-22T12:13:46.647810" elapsed="0.038561"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-19T21:48:42.212623" elapsed="2.166239"/>
+<status status="PASS" start="2024-04-22T12:13:46.686371" elapsed="2.174344"/>
 </kw>
 <doc>ทดสอบเข้าสู่ระบบ กรณี ผู้ใช้งานผิด</doc>
 <tag>gui</tag>
 <tag>gui_03</tag>
-<status status="PASS" start="2024-04-19T21:48:35.166804" elapsed="9.212058"/>
+<status status="PASS" start="2024-04-22T12:13:39.351116" elapsed="9.510723"/>
 </test>
-<status status="PASS" start="2024-04-19T21:48:35.145905" elapsed="9.236048"/>
+<status status="PASS" start="2024-04-22T12:13:39.322887" elapsed="9.540177"/>
 </suite>
-<status status="PASS" start="2024-04-19T21:48:12.317009" elapsed="32.066896"/>
+<status status="PASS" start="2024-04-22T12:13:17.767020" elapsed="31.099341"/>
 </suite>
 <statistics>
 <total>
